@@ -16,6 +16,7 @@
 		2747D16C260BC0DC00B4E5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2747D16A260BC0DC00B4E5C1 /* LaunchScreen.storyboard */; };
 		2747D177260BC0DC00B4E5C1 /* BorrowlaendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D176260BC0DC00B4E5C1 /* BorrowlaendTests.swift */; };
 		2747D182260BC0DC00B4E5C1 /* BorrowlaendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */; };
+		2747D19C260F278C00B4E5C1 /* BorrowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2747D17D260BC0DC00B4E5C1 /* BorrowlaendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BorrowlaendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowlaendUITests.swift; sourceTree = "<group>"; };
 		2747D183260BC0DC00B4E5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +109,7 @@
 				2747D15C260BC0DC00B4E5C1 /* AppDelegate.swift */,
 				2747D15E260BC0DC00B4E5C1 /* SceneDelegate.swift */,
 				2747D160260BC0DC00B4E5C1 /* ViewController.swift */,
-				2747D162260BC0DC00B4E5C1 /* Main.storyboard */,
 				2747D168260BC0DC00B4E5C1 /* Assets.xcassets */,
-				2747D16A260BC0DC00B4E5C1 /* LaunchScreen.storyboard */,
 				2747D16D260BC0DC00B4E5C1 /* Info.plist */,
 				2747D165260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld */,
 			);
@@ -144,6 +144,8 @@
 		2747D193260BC10300B4E5C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2747D16A260BC0DC00B4E5C1 /* LaunchScreen.storyboard */,
+				2747D162260BC0DC00B4E5C1 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 		2747D194260BC10900B4E5C1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				2747D161260BC0DC00B4E5C1 /* ViewController.swift in Sources */,
 				2747D15D260BC0DC00B4E5C1 /* AppDelegate.swift in Sources */,
 				2747D15F260BC0DC00B4E5C1 /* SceneDelegate.swift in Sources */,
+				2747D19C260F278C00B4E5C1 /* BorrowViewModel.swift in Sources */,
 				2747D167260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
