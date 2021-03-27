@@ -1,14 +1,14 @@
 //
-//  Borrowl_ndTests.swift
-//  BorrowlændTests
+//  BorrowlaendTests.swift
+//  BorrowlaendTests
 //
-//  Created by Emile Pedarros on 30/01/2021.
+//  Created by Emile Pedarros on 24/03/2021.
 //
 
 import XCTest
-@testable import Borrowl_nd
+@testable import Borrowlaend
 
-class Borrowl_ndTests: XCTestCase {
+class BorrowlaendTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
