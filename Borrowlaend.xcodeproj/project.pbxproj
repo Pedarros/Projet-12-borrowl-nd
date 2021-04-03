@@ -22,7 +22,7 @@
 		8CFAC1362615034B00EA91BC /* LoenViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC1342615034B00EA91BC /* LoenViewCell.swift */; };
 		8CFAC1372615034B00EA91BC /* LoenViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFAC1352615034B00EA91BC /* LoenViewCell.xib */; };
 		8CFAC139261506AC00EA91BC /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC138261506AC00EA91BC /* Loan.swift */; };
-		8CFAC13B261506F600EA91BC /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC13A261506F600EA91BC /* DummyData.swift */; };
+		8CFAC13B261506F600EA91BC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC13A261506F600EA91BC /* CoreDataStack.swift */; };
 		8CFAC13D26150E2600EA91BC /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC13C26150E2600EA91BC /* LoanViewController.swift */; };
 		F3E39C626DE23B4C9A23AC88 /* Pods_Borrowlaend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F07B2B817E22B53F1A96CA /* Pods_Borrowlaend.framework */; };
 /* End PBXBuildFile section */
@@ -68,7 +68,7 @@
 		8CFAC1342615034B00EA91BC /* LoenViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoenViewCell.swift; sourceTree = "<group>"; };
 		8CFAC1352615034B00EA91BC /* LoenViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoenViewCell.xib; sourceTree = "<group>"; };
 		8CFAC138261506AC00EA91BC /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
-		8CFAC13A261506F600EA91BC /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		8CFAC13A261506F600EA91BC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8CFAC13C26150E2600EA91BC /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 		D8B43F223D778F7275A65166 /* Pods_Borrowlaend_BorrowlaendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Borrowlaend_BorrowlaendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F07B2B817E22B53F1A96CA /* Pods_Borrowlaend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Borrowlaend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				8CFAC138261506AC00EA91BC /* Loan.swift */,
-				8CFAC13A261506F600EA91BC /* DummyData.swift */,
+				8CFAC13A261506F600EA91BC /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CFAC13B261506F600EA91BC /* DummyData.swift in Sources */,
+				8CFAC13B261506F600EA91BC /* CoreDataStack.swift in Sources */,
 				8CFAC1362615034B00EA91BC /* LoenViewCell.swift in Sources */,
 				2747D161260BC0DC00B4E5C1 /* ViewController.swift in Sources */,
 				2747D15D260BC0DC00B4E5C1 /* AppDelegate.swift in Sources */,

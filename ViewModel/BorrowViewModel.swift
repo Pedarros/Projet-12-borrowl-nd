@@ -21,7 +21,7 @@ override init() {
 
     }).disposed(by: disposeBag)
     
-    loan.accept(loan.value + DummyData.createData())
+    loan.accept(loan.value + CoreDataStack.retrieveData())
 }
    
     

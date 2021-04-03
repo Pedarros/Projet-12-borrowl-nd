@@ -2,7 +2,7 @@
 //  Loan.swift
 //  Borrowlaend
 //
-//  Created by Brahim on 31/03/2021.
+//  Created by Emile on 31/03/2021.
 //
 
 class Loan {
