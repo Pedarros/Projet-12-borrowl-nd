@@ -5,4 +5,28 @@
 //  Created by Emile Pedarros on 27/03/2021.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
+
+final class BorrowViewModel : NSObject {
+    
+    private let disposeBag = DisposeBag()
+    
+ var loan = BehaviorRelay<[Loan]>(value: [])
+    
+    
+override init() {
+    
+    loan.subscribe(onNext: { value in
+
+    }).disposed(by: disposeBag)
+    
+    loan.accept(loan.value + DummyData.createData())
+}
+   
+    
+    
+    
+    
+    
+}
