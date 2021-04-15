@@ -30,6 +30,8 @@ final class CoreDataStack : NSManagedObject {
         let loan3 = Loan(firstName: "Fernando", lastName: "TETE", date: "20/04/2021")
         return [loan1, loan2, loan3]
     }
+    
+    
     static func addLoan(_ loan : Loan) {
         let saveLoans = BorrowlaendEntity(context : AppDelegate.viewContext)
         addLoan.date = date

@@ -9,27 +9,30 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--LendViewController-->
         <scene sceneID="umj-We-qie">
             <objects>
-                <tableViewController id="tXP-d4-Xev" customClass="LoanViewController" customModule="Borrowlaend" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="LendViewController" id="tXP-d4-Xev" customClass="LendViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="unM-A2-LWA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="wKf-ed-EZM"/>
+                    <tabBarItem key="tabBarItem" title="Prêt" id="wKf-ed-EZM"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="unM-A2-LWA" id="kX2-kY-Rsc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFD-6L-nhQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1401" y="-480"/>
         </scene>
-        <!--Title-->
+        <!--AddViewController-->
         <scene sceneID="1At-Vo-XJF">
             <objects>
-                <viewController id="8zm-1m-oX4" sceneMemberID="viewController">
+                <viewController title="AddViewController" id="8zm-1m-oX4" customClass="AddViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nle-5a-zQf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,12 +132,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3a-ps-xQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3088" y="60"/>
+            <point key="canvasLocation" x="3248" y="189"/>
         </scene>
-        <!--Item-->
+        <!--BorrowViewController-->
         <scene sceneID="Esx-58-V6r">
             <objects>
-                <tableViewController id="WYB-Bj-gIm" sceneMemberID="viewController">
+                <tableViewController title="BorrowViewController" id="WYB-Bj-gIm" customClass="BorrowViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qzL-Ts-bR0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +157,7 @@
                             <outlet property="delegate" destination="WYB-Bj-gIm" id="nWq-oS-K3M"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="UtE-c1-39Q"/>
+                    <tabBarItem key="tabBarItem" title="Emprunt" id="UtE-c1-39Q"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wi-fq-fmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
