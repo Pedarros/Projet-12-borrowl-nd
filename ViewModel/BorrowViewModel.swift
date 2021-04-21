@@ -15,18 +15,24 @@ final class BorrowViewModel : NSObject {
  var loan = BehaviorRelay<[Loan]>(value: [])
     
     
-override init() {
+ override init() {
     
     loan.subscribe(onNext: { value in
 
     }).disposed(by: disposeBag)
     
-    loan.accept(loan.value + CoreDataStack.retrieveData())
-}
+    loan.accept(loan.value + CoreDataStack.getAllLoans())
+  }
+    
+    func deleteLoan(id: Int){
+        CoreDataStack.deleteBy(Int64(id))
+    }
    
+    func addloan(loan: Loan, idCategory: Int){
+        CoreDataStack.addLoan(loan, catory: Int64(idCategory))
+    }
     
     
-    
-    
+   
     
 }
