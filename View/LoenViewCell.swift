@@ -22,8 +22,8 @@ class LoenViewCell: UITableViewCell {
      var borrow: Loan? {
         didSet {
           guard let borrow = borrow else { return }
-          firstNameLabel.text = borrow.firstName
-          lastNameLabel.text = borrow.lastName
+            firstNameLabel.text = borrow.name
+          
         }
     }
 

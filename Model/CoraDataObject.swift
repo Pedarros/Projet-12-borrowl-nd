@@ -12,7 +12,7 @@ import CoreData
 final class CoreDataObject : NSManagedObject {
     
     
-    static func getAllLoans() -> [ObjectModel] {
+    static func getAllObjects() -> [ObjectModel] {
         let request: NSFetchRequest<ObjectEntity> = ObjectEntity.fetchRequest()
         guard let ObjectEntity = try? AppDelegate.viewContext.fetch(request) else {
             return []
@@ -37,6 +37,29 @@ final class CoreDataObject : NSManagedObject {
         
         saveContext()
     }
+    
+    static func getObjectById(_ id: Int64) -> ObjectModel {
+        let request: NSFetchRequest<ObjectEntity> = ObjectEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", id)
+        let ObjectEntity = try? AppDelegate.viewContext.fetch(request)
+        
+        let objectsModel = ObjectModel(name: ObjectEntity?.first?.name, id: ObjectEntity?.first?.id ?? 0)
+        
+        return objectsModel
+    }
+    
+    /// Delete RecipeEntity in Core Data. Use url in parameters to call the right data
+    static func deleteBy(_ id: Int64) {
+        let request: NSFetchRequest<ObjectEntity> = ObjectEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", id)
+        if let objectEntity = try? AppDelegate.viewContext.fetch(request) {
+            for borrow in objectEntity {
+                AppDelegate.viewContext.delete(borrow)
+            }
+        }
+        saveContext()
+    }
+    
     
     
     static func saveContext() {

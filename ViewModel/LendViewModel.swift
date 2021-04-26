@@ -1,14 +1,16 @@
 //
-//  BorrowViewModel.swift
+//  LendViewModel.swift
 //  Borrowlaend
 //
-//  Created by Emile Pedarros on 27/03/2021.
+//  Created by Emile Pedarros on 24/04/2021.
 //
+
+import Foundation
 
 import RxSwift
 import RxCocoa
 
-final class BorrowViewModel : NSObject {
+final class LendViewModel : NSObject {
     
     private let disposeBag = DisposeBag()
     
@@ -31,4 +33,5 @@ final class BorrowViewModel : NSObject {
     func addloan(loan: Loan, idCategory: Int){
         CoreDataStack.addLoan(loan, catory: Int64(idCategory))
     }
+    
 }

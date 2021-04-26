@@ -17,11 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="tXP-d4-Xev" id="W6g-7H-6H3"/>
+                            <outlet property="delegate" destination="tXP-d4-Xev" id="B03-T6-Og4"/>
+                        </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Prêt" id="wKf-ed-EZM"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="LendTableView" destination="unM-A2-LWA" id="KfU-Rq-qLi"/>
                         <outlet property="tableView" destination="unM-A2-LWA" id="kX2-kY-Rsc"/>
                     </connections>
                 </tableViewController>
@@ -114,6 +119,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="cul-Uq-PDo"/>
+                    <connections>
+                        <outlet property="borrowOrLend" destination="59q-VF-kgf" id="IKn-2u-ahI"/>
+                        <outlet property="date" destination="8Bc-c0-DZQ" id="6aT-WR-bgf"/>
+                        <outlet property="objectCategory" destination="CXh-wN-EJR" id="fe4-B3-FCh"/>
+                        <outlet property="objectName" destination="J8w-BA-GZq" id="XrO-r8-fJG"/>
+                        <outlet property="person" destination="z7A-Qt-59A" id="6TO-Mt-XGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcV-O9-nBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,11 +165,14 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="WYB-Bj-gIm" id="0Gv-Uq-tr5"/>
+                            <outlet property="dataSource" destination="WYB-Bj-gIm" id="F10-Te-uKC"/>
                             <outlet property="delegate" destination="WYB-Bj-gIm" id="nWq-oS-K3M"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Emprunt" id="UtE-c1-39Q"/>
+                    <connections>
+                        <outlet property="borrowTableView" destination="qzL-Ts-bR0" id="gLp-db-iyn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wi-fq-fmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

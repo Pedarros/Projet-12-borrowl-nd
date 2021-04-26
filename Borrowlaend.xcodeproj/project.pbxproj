@@ -21,6 +21,8 @@
 		2747D182260BC0DC00B4E5C1 /* BorrowlaendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */; };
 		2747D19C260F278C00B4E5C1 /* BorrowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */; };
 		275970EC262C93B40084AD50 /* CoreDataCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275970EB262C93B40084AD50 /* CoreDataCategory.swift */; };
+		27725EB72634528400EB76D1 /* LendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27725EB62634528400EB76D1 /* LendViewModel.swift */; };
+		27725EBC2634529100EB76D1 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27725EBB2634529100EB76D1 /* AddViewModel.swift */; };
 		27CF12AC262341EF00066AA7 /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12AB262341EF00066AA7 /* LendViewController.swift */; };
 		27CF12B12623420200066AA7 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B02623420200066AA7 /* BorrowViewController.swift */; };
 		27CF12B62623421700066AA7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B52623421700066AA7 /* AddViewController.swift */; };
@@ -73,6 +75,8 @@
 		2747D183260BC0DC00B4E5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewModel.swift; sourceTree = "<group>"; };
 		275970EB262C93B40084AD50 /* CoreDataCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCategory.swift; sourceTree = "<group>"; };
+		27725EB62634528400EB76D1 /* LendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewModel.swift; sourceTree = "<group>"; };
+		27725EBB2634529100EB76D1 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
 		27CF12AB262341EF00066AA7 /* LendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
 		27CF12B02623420200066AA7 /* BorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
 		27CF12B52623421700066AA7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */,
+				27725EB62634528400EB76D1 /* LendViewModel.swift */,
+				27725EBB2634529100EB76D1 /* AddViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				27CF12B62623421700066AA7 /* AddViewController.swift in Sources */,
 				2747D161260BC0DC00B4E5C1 /* ViewController.swift in Sources */,
 				27CF12B12623420200066AA7 /* BorrowViewController.swift in Sources */,
+				27725EBC2634529100EB76D1 /* AddViewModel.swift in Sources */,
 				2747D15D260BC0DC00B4E5C1 /* AppDelegate.swift in Sources */,
 				8CFAC13D26150E2600EA91BC /* LoanViewController.swift in Sources */,
 				8CFAC139261506AC00EA91BC /* Loan.swift in Sources */,
@@ -496,6 +503,7 @@
 				2747D167260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld in Sources */,
 				27CF12AC262341EF00066AA7 /* LendViewController.swift in Sources */,
 				272206EC2630819800A49147 /* ObjectModel.swift in Sources */,
+				27725EB72634528400EB76D1 /* LendViewModel.swift in Sources */,
 				272206E22630807B00A49147 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
