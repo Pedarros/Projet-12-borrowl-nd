@@ -9,33 +9,42 @@ import CoreData
 
 final class CoreDataStack : NSManagedObject {
     
-    static func getAllLoans() -> [Loan] {
+    static func getAllLoans(type: Int16) -> [Loan] {
+        
         let request: NSFetchRequest<BorrowlaendEntity> = BorrowlaendEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "type == %@", type)
         guard let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request) else {
             return []
         }
         var loans = [Loan]()
-        
+
         for borrow in borrowlaendEntity {
+            
                 let name = borrow.name
                 let date = borrow.date
-                let object = borrow.object
-                let loan = Loan(name: name, date: date, object: object)
+            
+                let objectName = borrow.borrowCategory?.name
+            
+                let categoryName = borrow.borrowCategory?.objectCategory?.name
+                let image = borrow.borrowCategory?.objectCategory?.image
+            
+            let categoryObject = Category(name: categoryName, image: image)
+            
+            let objectModel = ObjectModel(name: objectName, category: categoryObject)
+            
+            let loan = Loan(id: borrow.id, name: name, date: date, type: borrow.type, myObject: objectModel, status: borrow.status)
+            
                 loans.append(loan)
            }
        
         return loans
     }
     
-    
-    
     /// Save recipe in Core Data
-    static func addLoan(_ loan: Loan, catory: Int64) {
+    static func addLoan(_ loan: Loan) {
         let borrowlaendEntity = BorrowlaendEntity(context: AppDelegate.viewContext)
         borrowlaendEntity.name = loan.name
         borrowlaendEntity.date = loan.date
-        borrowlaendEntity.object = loan.object
-        borrowlaendEntity.category = catory
         saveContext()
     }
     
@@ -45,7 +54,14 @@ final class CoreDataStack : NSManagedObject {
         request.predicate = NSPredicate(format: "id == %@", id)
         let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request)
         
-        let loan = Loan(name: borrowlaendEntity?.first?.name, date: borrowlaendEntity?.first?.date, object: borrowlaendEntity?.first?.object)
+        let objectName = borrowlaendEntity?.first?.borrowCategory?.name
+        let categoryName =  borrowlaendEntity?.first?.borrowCategory?.objectCategory?.name
+        let image = borrowlaendEntity?.first?.borrowCategory?.objectCategory?.image
+        
+        let categoryObject = Category(name: categoryName, image: image)
+        let objectModel = ObjectModel(name: objectName, category: categoryObject)
+        
+        let loan = Loan(id: borrowlaendEntity?.first?.id, name: borrowlaendEntity?.first?.name, date: borrowlaendEntity?.first?.date, type: borrowlaendEntity?.first?.type, myObject: objectModel, status: (borrowlaendEntity?.first!.status)!)
         
         return loan
     }

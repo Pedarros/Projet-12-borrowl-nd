@@ -9,7 +9,7 @@ import RxCocoa
 import RxSwift
 import Foundation
 
-class BorrowViewController : UIViewController {
+class BorrowViewController : UITableViewController {
     
     @IBOutlet var borrowTableView: UITableView!
     

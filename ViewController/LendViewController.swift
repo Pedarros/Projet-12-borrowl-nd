@@ -9,10 +9,8 @@ import RxCocoa
 import RxSwift
 import Foundation
 
- class LendViewController : UIViewController {
+ class LendViewController : UITableViewController {
     
-    
-    @IBOutlet var LendTableView: UITableView!
     private let disposeBag = DisposeBag()
     
       let viewModel = BorrowViewModel()

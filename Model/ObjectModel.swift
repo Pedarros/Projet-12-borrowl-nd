@@ -9,5 +9,5 @@ import Foundation
 
 struct ObjectModel: Codable{
     var name : String?
-    var id : Int64
+    var category: Category
 }

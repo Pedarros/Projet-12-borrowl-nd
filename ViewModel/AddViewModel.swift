@@ -6,19 +6,10 @@
 //
 
 import Foundation
-import RxSwift
-import RxCocoa
 
 final class AddViewModel : NSObject {
+ func addloan(loan: Loan){
     
-    private let disposeBag = DisposeBag()
-    
-    var objectModel = BehaviorRelay<[ObjectModel]>(value: [])
-    var category = BehaviorRelay<[Category]>(value: [])
-    
- override init() {
-    
-        
-        
-    }
+    CoreDataStack.addLoan(loan)
+ }
 }

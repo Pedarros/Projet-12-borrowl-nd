@@ -21,14 +21,10 @@ final class BorrowViewModel : NSObject {
 
     }).disposed(by: disposeBag)
     
-    loan.accept(loan.value + CoreDataStack.getAllLoans())
+    loan.accept(loan.value + CoreDataStack.getAllLoans(type: 0))
   }
     
     func deleteLoan(id: Int){
         CoreDataStack.deleteBy(Int64(id))
-    }
-   
-    func addloan(loan: Loan, idCategory: Int){
-        CoreDataStack.addLoan(loan, catory: Int64(idCategory))
     }
 }
