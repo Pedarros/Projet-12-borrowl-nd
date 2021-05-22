@@ -11,6 +11,12 @@ import Foundation
 
  class LendViewController : UITableViewController {
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    @IBAction func addButtonAction(_ sender: Any) {
+    
+    }
+    
     private let disposeBag = DisposeBag()
     
       let viewModel = BorrowViewModel()

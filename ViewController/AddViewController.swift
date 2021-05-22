@@ -10,9 +10,6 @@ import UIKit
 import Foundation
 
 
-import UIKit
-
-
 class AddViewController : UIViewController {
     
     @IBOutlet weak var borrowOrLend: UISegmentedControl!
@@ -26,14 +23,34 @@ class AddViewController : UIViewController {
     @IBOutlet weak var person: UITextField!
     
     
-      let viewModel = BorrowViewModel()
+      let viewModel = AddViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
+       
     }
     
+ 
+    func addLend() {
+        var category = Category()
+        var objectModel = ObjectModel(category: Category)
+        var loan = Loan(name : objectName, status: (borrowOrLend != nil), date : dateObject,  )
+        let dateObject = date.date
+        let name = objectName.text
+        
+        viewModel.addloan(loan: loan)
+    }
+    
+}
+
+extension AddViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+       // addLend()
+        textField.resignFirstResponder()
+        return true
+    }
     
 }
