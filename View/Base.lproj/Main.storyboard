@@ -83,9 +83,17 @@
                                     <constraint firstAttribute="height" constant="70" id="KpL-mB-2AH"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Annuler" id="v5o-F3-6dQ"/>
+                                    <barButtonItem title="Annuler" id="v5o-F3-6dQ">
+                                        <connections>
+                                            <action selector="cancelButton:" destination="8zm-1m-oX4" id="Qp5-6Y-Lnt"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="280" style="plain" systemItem="fixedSpace" id="1Aq-Zu-Ygq"/>
-                                    <barButtonItem systemItem="add" id="NBW-n1-yPa"/>
+                                    <barButtonItem systemItem="add" id="NBW-n1-yPa">
+                                        <connections>
+                                            <action selector="addButtonSend:" destination="8zm-1m-oX4" id="F0N-rM-Zhf"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="59q-VF-kgf">
@@ -97,6 +105,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sgmentedcontrolAction:" destination="8zm-1m-oX4" eventType="valueChanged" id="5Hv-HU-cKc"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titre" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J8w-BA-GZq">
                                 <rect key="frame" x="10" y="264" width="394" height="50"/>
@@ -111,6 +122,9 @@
                             </pickerView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Bc-c0-DZQ">
                                 <rect key="frame" x="50" y="565" width="314" height="216"/>
+                                <connections>
+                                    <action selector="datechanged:" destination="8zm-1m-oX4" eventType="valueChanged" id="ixA-xS-cRW"/>
+                                </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="à" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MT-no-B3P">
                                 <rect key="frame" x="40" y="767" width="42" height="21"/>
@@ -157,7 +171,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mqc-hP-Kbt"/>
                     <connections>
+                        <outlet property="addButton" destination="NBW-n1-yPa" id="gHc-B5-pFU"/>
                         <outlet property="borrowOrLend" destination="59q-VF-kgf" id="IKn-2u-ahI"/>
+                        <outlet property="cancel" destination="v5o-F3-6dQ" id="0uR-Rh-wad"/>
                         <outlet property="date" destination="8Bc-c0-DZQ" id="6aT-WR-bgf"/>
                         <outlet property="objectCategory" destination="CXh-wN-EJR" id="fe4-B3-FCh"/>
                         <outlet property="objectName" destination="J8w-BA-GZq" id="XrO-r8-fJG"/>
@@ -166,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcV-O9-nBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588.4057971014495" y="262.5"/>
+            <point key="canvasLocation" x="1680" y="255"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oyS-jx-sS6">

@@ -11,3 +11,5 @@ struct Category: Codable{
     var name : String?
     var image : String?
 }
+
+
