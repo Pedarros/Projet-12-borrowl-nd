@@ -2,7 +2,7 @@
 //  LoanViewController.swift
 //  Borrowlaend
 //
-//  Created by Emile on 31/03/2021.
+//  Created by Emile Pedarros on 31/03/2021.
 //
 
 import UIKit

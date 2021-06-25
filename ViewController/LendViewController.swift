@@ -11,6 +11,7 @@ import Foundation
 
  class LendViewController : UITableViewController {
     
+    @IBOutlet var lendTableView: UITableView!
     @IBOutlet weak var addButton: UIBarButtonItem!
     
     @IBAction func addButtonAction(_ sender: Any) {
@@ -50,5 +51,15 @@ import Foundation
            cell.borrow = borrow
         }.disposed(by: disposeBag)
       }
+    func lendTableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func lendTableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     
 }

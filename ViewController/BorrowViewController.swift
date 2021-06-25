@@ -47,7 +47,16 @@ class BorrowViewController : UITableViewController {
         }.disposed(by: disposeBag)
       }
     
+    func borrowTableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func borrowTableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            borrowTableView.beginUpdates()
+            borrowTableView.deleteRows(at: [indexPath], with: .automatic)
+            borrowTableView.endUpdates()
+        }
+    }
+    
 }
-
-
-

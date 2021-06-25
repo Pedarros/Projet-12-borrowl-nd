@@ -10,6 +10,7 @@
 		272206E22630807B00A49147 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206E12630807B00A49147 /* Category.swift */; };
 		272206E72630817300A49147 /* CoraDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206E62630817300A49147 /* CoraDataObject.swift */; };
 		272206EC2630819800A49147 /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206EB2630819800A49147 /* ObjectModel.swift */; };
+		27281DB1266780C300FA7AB9 /* CoreDataTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27281DB0266780C300FA7AB9 /* CoreDataTestCase.swift */; };
 		2747D15D260BC0DC00B4E5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D15C260BC0DC00B4E5C1 /* AppDelegate.swift */; };
 		2747D15F260BC0DC00B4E5C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D15E260BC0DC00B4E5C1 /* SceneDelegate.swift */; };
 		2747D161260BC0DC00B4E5C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D160260BC0DC00B4E5C1 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		275970EC262C93B40084AD50 /* CoreDataCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275970EB262C93B40084AD50 /* CoreDataCategory.swift */; };
 		27725EB72634528400EB76D1 /* LendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27725EB62634528400EB76D1 /* LendViewModel.swift */; };
 		27725EBC2634529100EB76D1 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27725EBB2634529100EB76D1 /* AddViewModel.swift */; };
+		27863040266D39FF00C1DA64 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786303F266D39FF00C1DA64 /* DetailViewController.swift */; };
 		27CF12AC262341EF00066AA7 /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12AB262341EF00066AA7 /* LendViewController.swift */; };
 		27CF12B12623420200066AA7 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B02623420200066AA7 /* BorrowViewController.swift */; };
 		27CF12B62623421700066AA7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B52623421700066AA7 /* AddViewController.swift */; };
@@ -64,6 +66,7 @@
 		272206E12630807B00A49147 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		272206E62630817300A49147 /* CoraDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraDataObject.swift; sourceTree = "<group>"; };
 		272206EB2630819800A49147 /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
+		27281DB0266780C300FA7AB9 /* CoreDataTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestCase.swift; sourceTree = "<group>"; };
 		2747D159260BC0DC00B4E5C1 /* Borrowlaend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Borrowlaend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747D15C260BC0DC00B4E5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2747D15E260BC0DC00B4E5C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		275970EB262C93B40084AD50 /* CoreDataCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCategory.swift; sourceTree = "<group>"; };
 		27725EB62634528400EB76D1 /* LendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewModel.swift; sourceTree = "<group>"; };
 		27725EBB2634529100EB76D1 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		2786303F266D39FF00C1DA64 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		27CF12AB262341EF00066AA7 /* LendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
 		27CF12B02623420200066AA7 /* BorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
 		27CF12B52623421700066AA7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				27CF12AB262341EF00066AA7 /* LendViewController.swift */,
 				27CF12B52623421700066AA7 /* AddViewController.swift */,
 				27CF12B02623420200066AA7 /* BorrowViewController.swift */,
+				2786303F266D39FF00C1DA64 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */,
+				27281DB0266780C300FA7AB9 /* CoreDataTestCase.swift */,
 				2747D183260BC0DC00B4E5C1 /* Info.plist */,
 			);
 			path = BorrowlaendUITests;
@@ -507,6 +513,7 @@
 			files = (
 				8CFAC13B261506F600EA91BC /* CoreDataStack.swift in Sources */,
 				272206E72630817300A49147 /* CoraDataObject.swift in Sources */,
+				27863040266D39FF00C1DA64 /* DetailViewController.swift in Sources */,
 				8CFAC1362615034B00EA91BC /* LoenViewCell.swift in Sources */,
 				8C33B795264712C30045F4C5 /* ObjectEntity+CoreDataClass.swift in Sources */,
 				8C33B79A264712C30045F4C5 /* BorrowlaendEntity+CoreDataProperties.swift in Sources */,
@@ -544,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27281DB1266780C300FA7AB9 /* CoreDataTestCase.swift in Sources */,
 				2747D182260BC0DC00B4E5C1 /* BorrowlaendUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

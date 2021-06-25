@@ -10,9 +10,8 @@ import CoreData
 final class CoreDataStack : NSManagedObject {
     
     static func getAllLoans(type: Int16) -> [Loan] {
-        
         let request: NSFetchRequest<BorrowlaendEntity> = BorrowlaendEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "type == %@", type)
+       // request.predicate = NSPredicate(format: "type == @", type)
         guard let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request) else {
             return []
         }
@@ -20,10 +19,15 @@ final class CoreDataStack : NSManagedObject {
 
         for borrow in borrowlaendEntity {
             
-                let name = borrow.name
-                let date = borrow.date
+        let name = borrow.name
+        let date = borrow.date
+        let id = borrow.id
+        let type = borrow.type
+        let status = borrow.status
             
-                let objectName = borrow.borrowCategory?.name
+        
+            
+        let objectName = borrow.borrowCategory?.name
             
                 let categoryName = borrow.borrowCategory?.objectCategory?.name
                 let image = borrow.borrowCategory?.objectCategory?.image
@@ -32,7 +36,7 @@ final class CoreDataStack : NSManagedObject {
             
             let objectModel = ObjectModel(name: objectName, category: categoryObject)
             
-            let loan = Loan(id: borrow.id, name: name, date: date, type: borrow.type, myObject: objectModel, status: borrow.status)
+            let loan = Loan(id: id, name: name, date: date, type: type, myObject: objectModel, status: status)
             
                 loans.append(loan)
            }
@@ -42,9 +46,26 @@ final class CoreDataStack : NSManagedObject {
     
     /// Save recipe in Core Data
     static func addLoan(_ loan: Loan) {
+        
+        let categoryEntity = CategoryEntity(context: AppDelegate.viewContext)
+        categoryEntity.name = loan.myObject?.category.name
+        categoryEntity.name = loan.myObject?.category.image
+        saveContext()
+        
+        let objectEntity = ObjectEntity(context: AppDelegate.viewContext)
+        objectEntity.name = loan.myObject?.name
+        objectEntity.objectCategory = categoryEntity
+        saveContext()
+        
         let borrowlaendEntity = BorrowlaendEntity(context: AppDelegate.viewContext)
         borrowlaendEntity.name = loan.name
         borrowlaendEntity.date = loan.date
+        borrowlaendEntity.id = loan.id!
+        borrowlaendEntity.type = loan.type!
+        borrowlaendEntity.status = loan.status
+        
+        borrowlaendEntity.borrowCategory = objectEntity
+        
         saveContext()
     }
     
@@ -78,6 +99,16 @@ final class CoreDataStack : NSManagedObject {
         saveContext()
     }
     
+    static func deleteAll() {
+        let request: NSFetchRequest<BorrowlaendEntity> = BorrowlaendEntity.fetchRequest()
+        request.predicate = NSPredicate(value: true)
+        if let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request) {
+            for borrow in borrowlaendEntity {
+                AppDelegate.viewContext.delete(borrow)
+            }
+        }
+        saveContext()
+    }
     
     
     static func saveContext() {

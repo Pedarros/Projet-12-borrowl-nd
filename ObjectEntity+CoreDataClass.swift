@@ -2,7 +2,7 @@
 //  ObjectEntity+CoreDataClass.swift
 //  Borrowlaend
 //
-//  Created by Ahmed Dami on 08/05/2021.
+//  Created by Emile Pedarros on 11/04/2021.
 //
 //
 

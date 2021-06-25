@@ -29,9 +29,7 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var type = 0
     var selectedCategory : Category?
     var mydate = ""
-    @IBAction func addAction(_ sender: Any) {
-        addLend()
-    }
+    
     
     @IBAction func sgmentedcontrolAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -49,10 +47,10 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //cancel
     }
     
-    @IBAction func addButtonSend(_ sender: Any) {
+    @IBAction func addButton(_ sender: Any) {
         addLend()
+        self.dismiss(animated: true, completion: nil)
     }
-    
     
       let viewModel = AddViewModel()
     
