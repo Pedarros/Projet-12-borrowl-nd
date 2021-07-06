@@ -4,14 +4,14 @@
 //
 //  Created by Emile on 31/03/2021.
 //
-
+import UIKit
 import CoreData
 
-final class CoreDataStack : NSManagedObject {
+final class CoreDataStack : NSManagedObject{
     
     static func getAllLoans(type: Int16) -> [Loan] {
         let request: NSFetchRequest<BorrowlaendEntity> = BorrowlaendEntity.fetchRequest()
-       // request.predicate = NSPredicate(format: "type == @", type)
+       request.predicate = NSPredicate(format: "type == \(type)")
         guard let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request) else {
             return []
         }
@@ -32,7 +32,7 @@ final class CoreDataStack : NSManagedObject {
                 let categoryName = borrow.borrowCategory?.objectCategory?.name
                 let image = borrow.borrowCategory?.objectCategory?.image
             
-            let categoryObject = Category(name: categoryName, image: image)
+            let categoryObject = CategoryObject(name: categoryName, image: image)
             
             let objectModel = ObjectModel(name: objectName, category: categoryObject)
             
@@ -70,22 +70,26 @@ final class CoreDataStack : NSManagedObject {
     }
     
     /// Check if data already exists in Core Data comparing url
-    static func getLoanById(_ id: Int64) -> Loan {
+    static func getLoanById(_ id: Int64) -> Loan? {
+        
+        
         let request: NSFetchRequest<BorrowlaendEntity> = BorrowlaendEntity.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", id)
         let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request)
-        
-        let objectName = borrowlaendEntity?.first?.borrowCategory?.name
-        let categoryName =  borrowlaendEntity?.first?.borrowCategory?.objectCategory?.name
-        let image = borrowlaendEntity?.first?.borrowCategory?.objectCategory?.image
-        
-        let categoryObject = Category(name: categoryName, image: image)
-        let objectModel = ObjectModel(name: objectName, category: categoryObject)
-        
-        let loan = Loan(id: borrowlaendEntity?.first?.id, name: borrowlaendEntity?.first?.name, date: borrowlaendEntity?.first?.date, type: borrowlaendEntity?.first?.type, myObject: objectModel, status: (borrowlaendEntity?.first!.status)!)
-        
-        return loan
+     
+        if( borrowlaendEntity!.count > 0){
+            let objectName = borrowlaendEntity?.first?.borrowCategory?.name
+            let categoryName =  borrowlaendEntity?.first?.borrowCategory?.objectCategory?.name
+            let image = borrowlaendEntity?.first?.borrowCategory?.objectCategory?.image
+            let categoryObject = CategoryObject(name: categoryName, image: image)
+            let objectModel = ObjectModel(name: objectName, category: categoryObject)
+            let loan = Loan(id: borrowlaendEntity?.first?.id, name: borrowlaendEntity?.first?.name, date: borrowlaendEntity?.first?.date, type: borrowlaendEntity?.first?.type, myObject: objectModel, status: (borrowlaendEntity?.first!.status)!)
+                   
+             return loan
+        }
+      return nil
     }
+        
     
     /// Delete RecipeEntity in Core Data. Use url in parameters to call the right data
     static func deleteBy(_ id: Int64) {
@@ -115,3 +119,4 @@ final class CoreDataStack : NSManagedObject {
         try? AppDelegate.viewContext.save()
     }
 }
+

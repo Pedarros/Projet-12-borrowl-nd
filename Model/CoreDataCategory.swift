@@ -13,17 +13,17 @@ import CoreData
 final class CoreDataCategory : NSManagedObject {
     
     
-    static func getAllLoans() -> [Category] {
+    static func getAllLoans() -> [CategoryObject] {
         let request: NSFetchRequest<CategoryEntity> = CategoryEntity.fetchRequest()
         guard let CategoryEntity = try? AppDelegate.viewContext.fetch(request) else {
             return []
         }
-        var categories = [Category]()
+        var categories = [CategoryObject]()
         
         for borrow in CategoryEntity {
                 let name = borrow.name
             let image = borrow.image
-                let category = Category(name: name, image: image)
+                let category = CategoryObject(name: name, image: image)
             categories.append(category)
            }
        

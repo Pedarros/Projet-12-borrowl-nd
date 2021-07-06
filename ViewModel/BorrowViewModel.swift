@@ -12,8 +12,7 @@ final class BorrowViewModel : NSObject {
     
     private let disposeBag = DisposeBag()
     
- var loan = BehaviorRelay<[Loan]>(value: [])
-    
+    var loan = BehaviorRelay<[Loan]>(value: [])
     
  override init() {
     

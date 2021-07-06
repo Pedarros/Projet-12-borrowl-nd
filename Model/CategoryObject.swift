@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Codable{
+struct CategoryObject: Codable {
     var name : String?
     var image : String?
 }

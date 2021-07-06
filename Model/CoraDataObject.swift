@@ -21,7 +21,7 @@ final class CoreDataObject : NSManagedObject {
         
         for borrow in ObjectEntity {
             let name = borrow.name
-            let categoryObject = Category(name: borrow.objectCategory?.name, image: borrow.objectCategory?.image)
+            let categoryObject = CategoryObject(name: borrow.objectCategory?.name, image: borrow.objectCategory?.image)
             let object = ObjectModel(name: name, category: categoryObject)
             
             objects.append(object)

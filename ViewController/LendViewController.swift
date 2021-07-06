@@ -51,6 +51,7 @@ import Foundation
            cell.borrow = borrow
         }.disposed(by: disposeBag)
       }
+    
     func lendTableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -59,6 +60,10 @@ import Foundation
         if (editingStyle == .delete) {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    @IBAction func unwindToList(segue: UIStoryboardSegue) {
+        
     }
     
     

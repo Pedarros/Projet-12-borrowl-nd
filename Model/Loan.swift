@@ -5,7 +5,7 @@
 //  Created by Emile Pedarros on 31/03/2021.
 //
 
-struct Loan: Codable{
+struct Loan: Codable {
     
     var id : Int64?
     var name : String?

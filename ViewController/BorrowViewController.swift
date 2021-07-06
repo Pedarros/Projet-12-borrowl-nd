@@ -12,10 +12,16 @@ import Foundation
 class BorrowViewController : UITableViewController {
     
     @IBOutlet var borrowTableView: UITableView!
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    @IBAction func addButtonAction(_ sender: Any) {
+    
+    }
+    
     
     private let disposeBag = DisposeBag()
     
-      let viewModel = BorrowViewModel()
+      let viewModel = LendViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

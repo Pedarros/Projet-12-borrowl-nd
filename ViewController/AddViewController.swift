@@ -27,7 +27,7 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var addButton: UIBarButtonItem!
     
     var type = 0
-    var selectedCategory : Category?
+    var selectedCategory : CategoryObject?
     var mydate = ""
     
     
@@ -71,7 +71,7 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     func addLend() {
         
-        let category = Category(name: selectedCategory?.name, image: selectedCategory?.image)
+        let category = CategoryObject(name: selectedCategory?.name, image: selectedCategory?.image)
         
         let objectModel = ObjectModel(name: objectName.text,category: category)
 
@@ -95,6 +95,8 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedCategory = viewModel.categories[row]
     }
+    
+  
 }
 
 extension AddViewController : UITextFieldDelegate {
@@ -104,5 +106,6 @@ extension AddViewController : UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
     
 }

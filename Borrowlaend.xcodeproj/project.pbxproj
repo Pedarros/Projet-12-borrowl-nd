@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		272206E22630807B00A49147 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206E12630807B00A49147 /* Category.swift */; };
+		271521FA268F84A900F23580 /* LendTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271521F9268F84A900F23580 /* LendTestCase.swift */; };
+		272206E22630807B00A49147 /* CategoryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206E12630807B00A49147 /* CategoryObject.swift */; };
 		272206E72630817300A49147 /* CoraDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206E62630817300A49147 /* CoraDataObject.swift */; };
 		272206EC2630819800A49147 /* ObjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272206EB2630819800A49147 /* ObjectModel.swift */; };
-		27281DB1266780C300FA7AB9 /* CoreDataTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27281DB0266780C300FA7AB9 /* CoreDataTestCase.swift */; };
 		2747D15D260BC0DC00B4E5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D15C260BC0DC00B4E5C1 /* AppDelegate.swift */; };
 		2747D15F260BC0DC00B4E5C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D15E260BC0DC00B4E5C1 /* SceneDelegate.swift */; };
 		2747D161260BC0DC00B4E5C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D160260BC0DC00B4E5C1 /* ViewController.swift */; };
@@ -18,7 +18,7 @@
 		2747D167260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2747D165260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld */; };
 		2747D169260BC0DC00B4E5C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2747D168260BC0DC00B4E5C1 /* Assets.xcassets */; };
 		2747D16C260BC0DC00B4E5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2747D16A260BC0DC00B4E5C1 /* LaunchScreen.storyboard */; };
-		2747D177260BC0DC00B4E5C1 /* BorrowlaendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D176260BC0DC00B4E5C1 /* BorrowlaendTests.swift */; };
+		2747D177260BC0DC00B4E5C1 /* BorrowTestsCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D176260BC0DC00B4E5C1 /* BorrowTestsCase.swift */; };
 		2747D182260BC0DC00B4E5C1 /* BorrowlaendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */; };
 		2747D19C260F278C00B4E5C1 /* BorrowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747D19B260F278C00B4E5C1 /* BorrowViewModel.swift */; };
 		275970EC262C93B40084AD50 /* CoreDataCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275970EB262C93B40084AD50 /* CoreDataCategory.swift */; };
@@ -63,10 +63,10 @@
 
 /* Begin PBXFileReference section */
 		0B97122B20958E3590BE0A00 /* Pods-Borrowlaend-BorrowlaendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Borrowlaend-BorrowlaendUITests.debug.xcconfig"; path = "Target Support Files/Pods-Borrowlaend-BorrowlaendUITests/Pods-Borrowlaend-BorrowlaendUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		272206E12630807B00A49147 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		271521F9268F84A900F23580 /* LendTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendTestCase.swift; sourceTree = "<group>"; };
+		272206E12630807B00A49147 /* CategoryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryObject.swift; sourceTree = "<group>"; };
 		272206E62630817300A49147 /* CoraDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraDataObject.swift; sourceTree = "<group>"; };
 		272206EB2630819800A49147 /* ObjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectModel.swift; sourceTree = "<group>"; };
-		27281DB0266780C300FA7AB9 /* CoreDataTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestCase.swift; sourceTree = "<group>"; };
 		2747D159260BC0DC00B4E5C1 /* Borrowlaend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Borrowlaend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747D15C260BC0DC00B4E5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2747D15E260BC0DC00B4E5C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		2747D16B260BC0DC00B4E5C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2747D16D260BC0DC00B4E5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2747D172260BC0DC00B4E5C1 /* BorrowlaendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BorrowlaendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2747D176260BC0DC00B4E5C1 /* BorrowlaendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowlaendTests.swift; sourceTree = "<group>"; };
+		2747D176260BC0DC00B4E5C1 /* BorrowTestsCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowTestsCase.swift; sourceTree = "<group>"; };
 		2747D178260BC0DC00B4E5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2747D17D260BC0DC00B4E5C1 /* BorrowlaendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BorrowlaendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowlaendUITests.swift; sourceTree = "<group>"; };
@@ -199,7 +199,8 @@
 		2747D175260BC0DC00B4E5C1 /* BorrowlaendTests */ = {
 			isa = PBXGroup;
 			children = (
-				2747D176260BC0DC00B4E5C1 /* BorrowlaendTests.swift */,
+				2747D176260BC0DC00B4E5C1 /* BorrowTestsCase.swift */,
+				271521F9268F84A900F23580 /* LendTestCase.swift */,
 				2747D178260BC0DC00B4E5C1 /* Info.plist */,
 			);
 			path = BorrowlaendTests;
@@ -209,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				2747D181260BC0DC00B4E5C1 /* BorrowlaendUITests.swift */,
-				27281DB0266780C300FA7AB9 /* CoreDataTestCase.swift */,
 				2747D183260BC0DC00B4E5C1 /* Info.plist */,
 			);
 			path = BorrowlaendUITests;
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				8CFAC138261506AC00EA91BC /* Loan.swift */,
-				272206E12630807B00A49147 /* Category.swift */,
+				272206E12630807B00A49147 /* CategoryObject.swift */,
 				272206EB2630819800A49147 /* ObjectModel.swift */,
 				8CFAC13A261506F600EA91BC /* CoreDataStack.swift */,
 				275970EB262C93B40084AD50 /* CoreDataCategory.swift */,
@@ -535,7 +535,7 @@
 				272206EC2630819800A49147 /* ObjectModel.swift in Sources */,
 				27725EB72634528400EB76D1 /* LendViewModel.swift in Sources */,
 				8C33B797264712C30045F4C5 /* CategoryEntity+CoreDataClass.swift in Sources */,
-				272206E22630807B00A49147 /* Category.swift in Sources */,
+				272206E22630807B00A49147 /* CategoryObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +543,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2747D177260BC0DC00B4E5C1 /* BorrowlaendTests.swift in Sources */,
+				271521FA268F84A900F23580 /* LendTestCase.swift in Sources */,
+				2747D177260BC0DC00B4E5C1 /* BorrowTestsCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +552,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27281DB1266780C300FA7AB9 /* CoreDataTestCase.swift in Sources */,
 				2747D182260BC0DC00B4E5C1 /* BorrowlaendUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
