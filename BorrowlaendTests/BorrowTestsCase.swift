@@ -18,7 +18,7 @@ class BorrowTestsCase: XCTestCase {
     var date : String?
     var type : Int16?
     var myObject: ObjectModel?
-    let category: Category?
+    var category: CategoryObject?
     var fakeLend: Loan?
      
             
@@ -26,8 +26,8 @@ class BorrowTestsCase: XCTestCase {
     // XCTestCase has two methods, setUp() and tearDown(), for setting up your test case before each run and cleaning up any test data afterwards. Since each test gets to start with a clean slate, these methods help make your tests isolated and repeatable.
     
     override func setUp() {
-        category  = Category(name: "category1", image: "image")
-        myObject = ObjectModel(name: "macbook", category: category)
+        category  = CategoryObject(name: "category1", image: "image")
+        myObject = ObjectModel(name: "macbook", category: category!)
        fakeLend = Loan(id : 1, name : "coat", date : "12/11/2020", type : 1, myObject : myObject, status : true)
         
         CoreDataStack.deleteBy((fakeLend?.id)!)

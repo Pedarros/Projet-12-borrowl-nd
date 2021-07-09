@@ -28,7 +28,7 @@ class LoenViewCell: UITableViewCell {
           guard let borrow = borrow else { return }
             objectName.text = borrow.myObject?.name
             personName.text = borrow.name
-            objectCategoryImage.image = UIImage(named: (borrow.myObject?.category.name)!)
+            objectCategoryImage.image = UIImage(named: (borrow.myObject?.category.name) ?? "book")
           
           
         }

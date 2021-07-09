@@ -30,6 +30,15 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var selectedCategory : CategoryObject?
     var mydate = ""
     
+    private let segueToLendViewController = "segueToRecipeDetail"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == segueToLendViewController {
+                
+                addLend()
+                
+            }
+        }
     
     @IBAction func sgmentedcontrolAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -50,6 +59,7 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBAction func addButton(_ sender: Any) {
         addLend()
         self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: self.segueToLendViewController, sender: self)
     }
     
       let viewModel = AddViewModel()
