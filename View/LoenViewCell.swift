@@ -14,7 +14,7 @@ class LoenViewCell: UITableViewCell {
     @IBOutlet weak var objectName: UILabel!
     @IBOutlet weak var personName: UILabel!
     @IBOutlet weak var objectCategoryImage: UIImageView!
- 
+    @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +29,7 @@ class LoenViewCell: UITableViewCell {
             objectName.text = borrow.myObject?.name
             personName.text = borrow.name
             objectCategoryImage.image = UIImage(named: (borrow.myObject?.category.name) ?? "book")
-          
+            dateLabel.text = borrow.date
           
         }
     }

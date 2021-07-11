@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oo0-p3-qpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oo0-p3-qpa">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--LendViewController-->
         <scene sceneID="umj-We-qie">
             <objects>
-                <tableViewController title="LendViewController" id="tXP-d4-Xev" customClass="LendViewController" customModule="Borrowlaend" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="LendViewController" id="tXP-d4-Xev" customClass="BorrowViewController" customModule="Borrowlaend" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="unM-A2-LWA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="QVO-u7-z9H">
@@ -32,7 +30,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="7iu-Yo-gHp" id="bXP-7p-mOv"/>
-                        <outlet property="lendTableView" destination="unM-A2-LWA" id="Fhl-ZJ-WAF"/>
+                        <outlet property="borrowTableView" destination="unM-A2-LWA" id="Fhl-ZJ-WAF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFD-6L-nhQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,8 +55,8 @@
                                                 <rect key="frame" x="30" y="30" width="354" height="32"/>
                                                 <color key="backgroundColor" red="0.98431372549999996" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <segments>
-                                                    <segment title="First"/>
-                                                    <segment title="Second"/>
+                                                    <segment title="Prêt"/>
+                                                    <segment title="Emprunt"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.98431372549019602" green="0.74509803921568629" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
@@ -105,7 +103,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="2MT-no-B3P" firstAttribute="leading" secondItem="xGL-nU-aCR" secondAttribute="leading" constant="38" id="1pe-QB-1zr"/>
                                             <constraint firstItem="59q-VF-kgf" firstAttribute="leading" secondItem="xGL-nU-aCR" secondAttribute="leading" constant="30" id="3Jc-x6-8C6"/>
@@ -122,7 +120,7 @@
                                             <constraint firstItem="J8w-BA-GZq" firstAttribute="top" secondItem="59q-VF-kgf" secondAttribute="bottom" constant="10" id="e7j-P0-7mw"/>
                                             <constraint firstItem="z7A-Qt-59A" firstAttribute="top" secondItem="8Bc-c0-DZQ" secondAttribute="bottom" constant="20" id="k8V-mW-1py"/>
                                             <constraint firstItem="z7A-Qt-59A" firstAttribute="leading" secondItem="2MT-no-B3P" secondAttribute="trailing" constant="27" id="lLJ-Sf-HPQ"/>
-                                            <constraint firstItem="59q-VF-kgf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xGL-nU-aCR" secondAttribute="leading" symbolic="YES" id="mDl-RM-vDC"/>
+                                            <constraint firstItem="59q-VF-kgf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xGL-nU-aCR" secondAttribute="leading" constant="20" symbolic="YES" id="mDl-RM-vDC"/>
                                             <constraint firstItem="z7A-Qt-59A" firstAttribute="centerX" secondItem="xGL-nU-aCR" secondAttribute="centerX" id="r3f-ZK-F3y"/>
                                             <constraint firstAttribute="height" priority="250" constant="700" id="tv5-uB-iCz"/>
                                             <constraint firstItem="CXh-wN-EJR" firstAttribute="leading" secondItem="xGL-nU-aCR" secondAttribute="leading" constant="60" id="u5F-HR-GRH"/>
@@ -139,8 +137,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="NEL-jh-VSp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5yL-dX-dhP" firstAttribute="trailing" secondItem="Nle-5a-zQf" secondAttribute="trailing" id="8t8-XU-RaC"/>
                             <constraint firstAttribute="bottom" secondItem="5yL-dX-dhP" secondAttribute="bottom" id="FF7-Pb-TCg"/>
@@ -148,19 +145,18 @@
                             <constraint firstItem="5yL-dX-dhP" firstAttribute="trailing" secondItem="Nle-5a-zQf" secondAttribute="trailing" id="h64-Dp-47L"/>
                             <constraint firstItem="5yL-dX-dhP" firstAttribute="leading" secondItem="Nle-5a-zQf" secondAttribute="leading" id="r0p-A5-PjQ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="NEL-jh-VSp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add new item" largeTitleDisplayMode="always" id="YfJ-sf-xz4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hgf-wm-okw">
                             <color key="tintColor" red="0.98431372549999996" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="addButton:" destination="8zm-1m-oX4" id="LUc-aM-w5d"/>
-                                <segue destination="pmJ-Xk-vKT" kind="unwind" unwindAction="unwindToListWithSegue:" id="Xdz-ce-7ql"/>
+                                <action selector="addButton:" destination="8zm-1m-oX4" id="Foh-gz-QUx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="addButton" destination="Hgf-wm-okw" id="zga-Bq-E2U"/>
                         <outlet property="borrowOrLend" destination="59q-VF-kgf" id="IKn-2u-ahI"/>
                         <outlet property="date" destination="8Bc-c0-DZQ" id="6aT-WR-bgf"/>
                         <outlet property="objectCategory" destination="CXh-wN-EJR" id="fe4-B3-FCh"/>
@@ -169,18 +165,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcV-O9-nBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="pmJ-Xk-vKT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3534.7826086956525" y="6.6964285714285712"/>
         </scene>
         <!--BorrowViewController-->
         <scene sceneID="Esx-58-V6r">
             <objects>
-                <tableViewController title="BorrowViewController" id="WYB-Bj-gIm" customClass="BorrowViewController" customModule="Borrowlaend" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="BorrowViewController" id="WYB-Bj-gIm" customClass="LendViewController" customModule="Borrowlaend" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qzL-Ts-bR0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tableView>
                     <navigationItem key="navigationItem" id="sbZ-9K-pQp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gu3-72-rxK">
@@ -193,7 +188,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="Gu3-72-rxK" id="kzR-8w-ed4"/>
-                        <outlet property="borrowTableView" destination="qzL-Ts-bR0" id="cna-6u-IMn"/>
+                        <outlet property="lendTableView" destination="qzL-Ts-bR0" id="cna-6u-IMn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Wi-fq-fmG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -262,9 +257,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="H1M-pa-LKT"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

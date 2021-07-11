@@ -31,7 +31,7 @@
                         <rect key="frame" x="30" y="99" width="70" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="BA0-in-8Mx"/>
-                            <constraint firstAttribute="width" constant="70" id="aMG-EJ-lWW"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="800" constant="70" id="aMG-EJ-lWW"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -44,9 +44,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwr-9f-ClS">
-                        <rect key="frame" x="45" y="168" width="60" height="21"/>
+                        <rect key="frame" x="169" y="97" width="60" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="mf4-4P-UEv"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="800" constant="60" id="Trw-3U-2wF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -55,19 +55,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="fAX-O6-ppr" secondAttribute="bottom" constant="20" id="4ej-Bo-Un5"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="jwr-9f-ClS" secondAttribute="bottom" constant="15" id="Jyh-fp-yJv"/>
+                    <constraint firstItem="jwr-9f-ClS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="IGH-Cn-nTb"/>
                     <constraint firstItem="fAX-O6-ppr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="MZh-5o-XGt"/>
                     <constraint firstAttribute="trailing" secondItem="fAX-O6-ppr" secondAttribute="trailing" constant="15" id="NJJ-PG-n2k"/>
-                    <constraint firstItem="jwr-9f-ClS" firstAttribute="top" secondItem="QTn-6e-bmd" secondAttribute="bottom" constant="39" id="OZh-46-Cov"/>
                     <constraint firstItem="hWe-Er-K9I" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VgX-pu-t4j"/>
                     <constraint firstItem="QTn-6e-bmd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="WhB-Ui-aug"/>
-                    <constraint firstItem="jwr-9f-ClS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="25" id="c1e-tC-C9G"/>
+                    <constraint firstItem="jwr-9f-ClS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wnw-yF-s9z"/>
                     <constraint firstItem="hWe-Er-K9I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kul-gP-ERo"/>
                     <constraint firstItem="QTn-6e-bmd" firstAttribute="top" secondItem="hWe-Er-K9I" secondAttribute="bottom" constant="29" id="yi4-W0-MUn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="dateLabel" destination="jwr-9f-ClS" id="fei-CA-rqz"/>
                 <outlet property="objectCategoryImage" destination="fAX-O6-ppr" id="Jt1-LO-1Zu"/>
                 <outlet property="objectName" destination="hWe-Er-K9I" id="xna-Ng-F4k"/>
                 <outlet property="personName" destination="QTn-6e-bmd" id="S0t-ps-Frq"/>

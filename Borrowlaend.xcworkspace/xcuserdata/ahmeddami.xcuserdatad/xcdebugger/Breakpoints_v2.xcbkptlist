@@ -119,54 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CC28BBED-5035-4C45-9DD0-5660CDD8F8BD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewModel/BorrowViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CC28BBED-5035-4C45-9DD0-5660CDD8F8BD - 70db0d62a8c8688a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Borrowlaend.BorrowViewModel.init() -&gt; Borrowlaend.BorrowViewModel"
-                  moduleName = "Borrowlaend"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmeddami/Downloads/Borrowl%C3%A6nd%202/ViewModel/BorrowViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "437">
-               </Location>
-               <Location
-                  uuid = "CC28BBED-5035-4C45-9DD0-5660CDD8F8BD - d7571f4c98020555"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Borrowlaend.Loan&gt;) -&gt; () in Borrowlaend.BorrowViewModel.init() -&gt; Borrowlaend.BorrowViewModel"
-                  moduleName = "Borrowlaend"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmeddami/Downloads/Borrowl%C3%A6nd%202/ViewModel/BorrowViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F9210DCA-D928-40F5-9589-7818235EA4BF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -174,8 +126,8 @@
             filePath = "ViewController/LendViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "configureTableView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -192,8 +144,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "LendViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,8 +160,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            landmarkName = "BorrowViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,10 +174,10 @@
             filePath = "ViewController/AddViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "AddViewController"
-            landmarkType = "3">
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "addLend()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -238,8 +190,8 @@
             filePath = "ViewController/AddViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "addLend()"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,9 +206,9 @@
             filePath = "ViewController/AddViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "addLend()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "datechanged(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -311,32 +263,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "304E9FCE-4C61-46D9-AF0E-B130AFF76963"
+            uuid = "E0829C2B-A692-47F5-AD8A-022A4A9B03E9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ViewModel/LendViewModel.swift"
+            filePath = "ViewController/AddViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "init()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "addButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "40D3ADCE-5A6D-45E4-B25E-854B41099BD2"
+            uuid = "A5368F98-775E-46BD-9AB4-BD54CE0ECA9A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ViewModel/BorrowViewModel.swift"
+            filePath = "View/LoenViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "init()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "borrow"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7186D713-9F08-4C79-B87A-BF138332E2E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/AddViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "datechanged(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "685D9648-7BFE-4488-B61F-8A6F161EB9AF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController/AddViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "addLend()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41C7F26A-83F8-434F-BA45-7B9A50CC1914"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Model/CoreDataStack.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "addLoan(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

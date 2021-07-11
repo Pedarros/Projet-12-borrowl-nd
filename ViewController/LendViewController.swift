@@ -1,5 +1,5 @@
 //
-//  LendViewController.swift
+//  BorrowViewController.swift
 //  Borrowlaend
 //
 //  Created by Emile Pedarros on 11/04/2021.
@@ -9,7 +9,7 @@ import RxCocoa
 import RxSwift
 import Foundation
 
- class LendViewController : UITableViewController {
+class LendViewController : UITableViewController {
     
     @IBOutlet var lendTableView: UITableView!
     @IBOutlet weak var addButton: UIBarButtonItem!
@@ -18,9 +18,10 @@ import Foundation
     
     }
     
+    
     private let disposeBag = DisposeBag()
     
-      let viewModel = BorrowViewModel()
+      let viewModel = LendViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,11 @@ import Foundation
         configureTableView()
         
         bind()
-        
+        delete()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+          viewModel.loadData.subscribe().disposed(by: disposeBag)
     }
     
     private func registerCell() {
@@ -50,11 +55,18 @@ import Foundation
          row, borrow, cell in
            cell.borrow = borrow
         }.disposed(by: disposeBag)
-        
       }
     
-    
+    private  func delete() {
+        lendTableView.rx.itemDeleted
+            .subscribe{
+                print("\($0)")
+                
+                self.viewModel.deleteLoan(id: 0)
+            }
+            .disposed(by: disposeBag)
+            
+    }
    
     
 }
-

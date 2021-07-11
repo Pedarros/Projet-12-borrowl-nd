@@ -28,13 +28,13 @@ class BorrowTestsCase: XCTestCase {
     override func setUp() {
         category  = CategoryObject(name: "category1", image: "image")
         myObject = ObjectModel(name: "macbook", category: category!)
-       fakeLend = Loan(id : 1, name : "coat", date : "12/11/2020", type : 1, myObject : myObject, status : true)
+       fakeLend = Loan(id : 1, name : "coat", date : "12/11/2020", type : 0, myObject : myObject, status : true)
         
-        CoreDataStack.deleteBy((fakeLend?.id)!)
+    
     }
     
     override func tearDown() {
-        CoreDataStack.deleteBy((fakeLend?.id)!)
+        CoreDataStack.deleteBy(id: (fakeLend?.id)!)
     }
  
     
@@ -50,7 +50,7 @@ class BorrowTestsCase: XCTestCase {
     func testGivenBorrowsCreatedAndRemoved_WhenAddBorrowedTestAndDeleteIt_ThenBorrowedTestShouldNotExist() {
         CoreDataStack.addLoan(fakeLend!)
          XCTAssertEqual(CoreDataStack.getLoanById((fakeLend?.id)!), fakeLend)
-        CoreDataStack.deleteBy((fakeLend?.id)!)
+        CoreDataStack.deleteBy(id: (fakeLend?.id)!)
         XCTAssertNil(CoreDataStack.getLoanById((fakeLend?.id)!))
     }
     
@@ -65,6 +65,6 @@ class BorrowTestsCase: XCTestCase {
     func testGivenBorrows_WhenDeleteAll_ThenBorrowsListReturnedIsEmpty() {
         CoreDataStack.addLoan(fakeLend!)
         CoreDataStack.deleteAll()
-        XCTAssertEqual(CoreDataStack.getAllLoans(type: 1).count, 0)
+        XCTAssertEqual(CoreDataStack.getAllLoans(type: 0).count, 0)
     }
 }

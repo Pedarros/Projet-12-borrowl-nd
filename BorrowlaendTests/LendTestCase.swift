@@ -19,7 +19,7 @@ class LendTestCase: XCTestCase {
     var date : String?
     var type : Int16?
     var myObject: ObjectModel?
-    let category: Category?
+    var category: CategoryObject?
     var fakeLend: Loan?
      
             
@@ -27,15 +27,15 @@ class LendTestCase: XCTestCase {
     // XCTestCase has two methods, setUp() and tearDown(), for setting up your test case before each run and cleaning up any test data afterwards. Since each test gets to start with a clean slate, these methods help make your tests isolated and repeatable.
     
     override func setUp() {
-        category  = Category(name: "category1", image: "image")
-        myObject = ObjectModel(name: "macbook", category: category)
-       fakeLend = Loan(id : 1, name : "coat", date : "12/11/2020", type : 2, myObject : myObject, status : true)
+        category  = CategoryObject(name: "category1", image: "image")
+        myObject = ObjectModel(name: "macbook", category: category!)
+       fakeLend = Loan(id : 1, name : "coat", date : "12/11/2020", type : 1, myObject : myObject, status : true)
         
-        CoreDataStack.deleteBy((fakeLend?.id)!)
+     
     }
     
     override func tearDown() {
-        CoreDataStack.deleteBy((fakeLend?.id)!)
+        CoreDataStack.deleteBy(id: (fakeLend?.id)!)
     }
  
     
@@ -51,7 +51,7 @@ class LendTestCase: XCTestCase {
     func testGivenBorrowsCreatedAndRemoved_WhenAddBorrowedTestAndDeleteIt_ThenBorrowedTestShouldNotExist() {
         CoreDataStack.addLoan(fakeLend!)
          XCTAssertEqual(CoreDataStack.getLoanById((fakeLend?.id)!), fakeLend)
-        CoreDataStack.deleteBy((fakeLend?.id)!)
+        CoreDataStack.deleteBy(id: (fakeLend?.id)!)
         XCTAssertNil(CoreDataStack.getLoanById((fakeLend?.id)!))
     }
     
@@ -60,12 +60,12 @@ class LendTestCase: XCTestCase {
         CoreDataStack.addLoan(fakeLend!)
         CoreDataStack.addLoan(fakeLend!)
         CoreDataStack.addLoan(fakeLend!)
-        XCTAssertEqual(CoreDataStack.getAllLoans(type: 0).count, 3)
+        XCTAssertEqual(CoreDataStack.getAllLoans(type: 1).count, 3)
     }
     
     func testGivenBorrows_WhenDeleteAll_ThenBorrowsListReturnedIsEmpty() {
         CoreDataStack.addLoan(fakeLend!)
         CoreDataStack.deleteAll()
-        XCTAssertEqual(CoreDataStack.getAllLoans(type: 2).count, 0)
+        XCTAssertEqual(CoreDataStack.getAllLoans(type: 1).count, 0)
     }
 }

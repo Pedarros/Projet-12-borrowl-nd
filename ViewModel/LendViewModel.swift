@@ -16,18 +16,20 @@ final class LendViewModel : NSObject {
     
     var loan = BehaviorRelay<[Loan]>(value: [])
     
+    var loadData: Observable<[Loan]> {
+          return Observable.deferred { [unowned self] in
+             return Observable.just(CoreDataStack.getAllLoans(type: 1))
+          }.do(onNext: { [unowned self] data in
+             self.loan.accept(data)
+          })
+       }
     
  override init() {
     
-    loan.subscribe(onNext: { value in
-
-    }).disposed(by: disposeBag)
-    
-    loan.accept(loan.value + CoreDataStack.getAllLoans(type: 1))
   }
     
     func deleteLoan(id: Int){
-        CoreDataStack.deleteBy(Int64(id))
+        CoreDataStack.deleteBy(id: Int64(id))
     }
     
 }

@@ -24,9 +24,8 @@
 		275970EC262C93B40084AD50 /* CoreDataCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275970EB262C93B40084AD50 /* CoreDataCategory.swift */; };
 		27725EB72634528400EB76D1 /* LendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27725EB62634528400EB76D1 /* LendViewModel.swift */; };
 		27725EBC2634529100EB76D1 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27725EBB2634529100EB76D1 /* AddViewModel.swift */; };
-		27863040266D39FF00C1DA64 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2786303F266D39FF00C1DA64 /* DetailViewController.swift */; };
-		27CF12AC262341EF00066AA7 /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12AB262341EF00066AA7 /* LendViewController.swift */; };
-		27CF12B12623420200066AA7 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B02623420200066AA7 /* BorrowViewController.swift */; };
+		27CF12AC262341EF00066AA7 /* BorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12AB262341EF00066AA7 /* BorrowViewController.swift */; };
+		27CF12B12623420200066AA7 /* LendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B02623420200066AA7 /* LendViewController.swift */; };
 		27CF12B62623421700066AA7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF12B52623421700066AA7 /* AddViewController.swift */; };
 		2E262F5249C22891573ADE46 /* Pods_BorrowlaendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA2E15FE9205D0B0E4E4306 /* Pods_BorrowlaendTests.framework */; };
 		48BB1AF19229B0EDC77E0F99 /* Pods_Borrowlaend_BorrowlaendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B43F223D778F7275A65166 /* Pods_Borrowlaend_BorrowlaendUITests.framework */; };
@@ -40,7 +39,6 @@
 		8CFAC1372615034B00EA91BC /* LoenViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFAC1352615034B00EA91BC /* LoenViewCell.xib */; };
 		8CFAC139261506AC00EA91BC /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC138261506AC00EA91BC /* Loan.swift */; };
 		8CFAC13B261506F600EA91BC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC13A261506F600EA91BC /* CoreDataStack.swift */; };
-		8CFAC13D26150E2600EA91BC /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFAC13C26150E2600EA91BC /* LoanViewController.swift */; };
 		F3E39C626DE23B4C9A23AC88 /* Pods_Borrowlaend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9F07B2B817E22B53F1A96CA /* Pods_Borrowlaend.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,9 +84,8 @@
 		275970EB262C93B40084AD50 /* CoreDataCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCategory.swift; sourceTree = "<group>"; };
 		27725EB62634528400EB76D1 /* LendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewModel.swift; sourceTree = "<group>"; };
 		27725EBB2634529100EB76D1 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
-		2786303F266D39FF00C1DA64 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		27CF12AB262341EF00066AA7 /* LendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
-		27CF12B02623420200066AA7 /* BorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		27CF12AB262341EF00066AA7 /* BorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowViewController.swift; sourceTree = "<group>"; };
+		27CF12B02623420200066AA7 /* LendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendViewController.swift; sourceTree = "<group>"; };
 		27CF12B52623421700066AA7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		3DBEC5BCA04DDD0D899804E9 /* Pods-Borrowlaend-BorrowlaendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Borrowlaend-BorrowlaendUITests.release.xcconfig"; path = "Target Support Files/Pods-Borrowlaend-BorrowlaendUITests/Pods-Borrowlaend-BorrowlaendUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A91CC03227E73E029905018 /* Pods-BorrowlaendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BorrowlaendTests.debug.xcconfig"; path = "Target Support Files/Pods-BorrowlaendTests/Pods-BorrowlaendTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +100,6 @@
 		8CFAC1352615034B00EA91BC /* LoenViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoenViewCell.xib; sourceTree = "<group>"; };
 		8CFAC138261506AC00EA91BC /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		8CFAC13A261506F600EA91BC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		8CFAC13C26150E2600EA91BC /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 		D8B43F223D778F7275A65166 /* Pods_Borrowlaend_BorrowlaendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Borrowlaend_BorrowlaendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F07B2B817E22B53F1A96CA /* Pods_Borrowlaend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Borrowlaend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA2E15FE9205D0B0E4E4306 /* Pods_BorrowlaendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BorrowlaendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,10 +138,9 @@
 		27445420261E1DB6000E972A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27CF12AB262341EF00066AA7 /* LendViewController.swift */,
+				27CF12AB262341EF00066AA7 /* BorrowViewController.swift */,
 				27CF12B52623421700066AA7 /* AddViewController.swift */,
-				27CF12B02623420200066AA7 /* BorrowViewController.swift */,
-				2786303F266D39FF00C1DA64 /* DetailViewController.swift */,
+				27CF12B02623420200066AA7 /* LendViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -191,7 +186,6 @@
 				2747D168260BC0DC00B4E5C1 /* Assets.xcassets */,
 				2747D16D260BC0DC00B4E5C1 /* Info.plist */,
 				2747D165260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld */,
-				8CFAC13C26150E2600EA91BC /* LoanViewController.swift */,
 			);
 			path = Borrowlaend;
 			sourceTree = "<group>";
@@ -513,25 +507,23 @@
 			files = (
 				8CFAC13B261506F600EA91BC /* CoreDataStack.swift in Sources */,
 				272206E72630817300A49147 /* CoraDataObject.swift in Sources */,
-				27863040266D39FF00C1DA64 /* DetailViewController.swift in Sources */,
 				8CFAC1362615034B00EA91BC /* LoenViewCell.swift in Sources */,
 				8C33B795264712C30045F4C5 /* ObjectEntity+CoreDataClass.swift in Sources */,
 				8C33B79A264712C30045F4C5 /* BorrowlaendEntity+CoreDataProperties.swift in Sources */,
 				27CF12B62623421700066AA7 /* AddViewController.swift in Sources */,
 				2747D161260BC0DC00B4E5C1 /* ViewController.swift in Sources */,
-				27CF12B12623420200066AA7 /* BorrowViewController.swift in Sources */,
+				27CF12B12623420200066AA7 /* LendViewController.swift in Sources */,
 				8C33B796264712C30045F4C5 /* ObjectEntity+CoreDataProperties.swift in Sources */,
 				27725EBC2634529100EB76D1 /* AddViewModel.swift in Sources */,
 				2747D15D260BC0DC00B4E5C1 /* AppDelegate.swift in Sources */,
 				8C33B798264712C30045F4C5 /* CategoryEntity+CoreDataProperties.swift in Sources */,
-				8CFAC13D26150E2600EA91BC /* LoanViewController.swift in Sources */,
 				8CFAC139261506AC00EA91BC /* Loan.swift in Sources */,
 				2747D15F260BC0DC00B4E5C1 /* SceneDelegate.swift in Sources */,
 				2747D19C260F278C00B4E5C1 /* BorrowViewModel.swift in Sources */,
 				8C33B799264712C30045F4C5 /* BorrowlaendEntity+CoreDataClass.swift in Sources */,
 				275970EC262C93B40084AD50 /* CoreDataCategory.swift in Sources */,
 				2747D167260BC0DC00B4E5C1 /* Borrowlaend.xcdatamodeld in Sources */,
-				27CF12AC262341EF00066AA7 /* LendViewController.swift in Sources */,
+				27CF12AC262341EF00066AA7 /* BorrowViewController.swift in Sources */,
 				272206EC2630819800A49147 /* ObjectModel.swift in Sources */,
 				27725EB72634528400EB76D1 /* LendViewModel.swift in Sources */,
 				8C33B797264712C30045F4C5 /* CategoryEntity+CoreDataClass.swift in Sources */,
@@ -642,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -697,7 +689,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -715,7 +707,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Borrowlaend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -723,7 +715,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oc.Borrowlaend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -735,7 +727,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Borrowlaend/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,7 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oc.Borrowlaend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

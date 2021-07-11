@@ -50,12 +50,12 @@ final class CoreDataStack : NSManagedObject{
         let categoryEntity = CategoryEntity(context: AppDelegate.viewContext)
         categoryEntity.name = loan.myObject?.category.name
         categoryEntity.name = loan.myObject?.category.image
-        saveContext()
+    
         
         let objectEntity = ObjectEntity(context: AppDelegate.viewContext)
         objectEntity.name = loan.myObject?.name
         objectEntity.objectCategory = categoryEntity
-        saveContext()
+   
         
         let borrowlaendEntity = BorrowlaendEntity(context: AppDelegate.viewContext)
         borrowlaendEntity.name = loan.name
@@ -92,9 +92,10 @@ final class CoreDataStack : NSManagedObject{
         
     
     /// Delete RecipeEntity in Core Data. Use url in parameters to call the right data
-    static func deleteBy(_ id: Int64) {
+    static func deleteBy(id: Int64) {
         let request: NSFetchRequest<BorrowlaendEntity> = BorrowlaendEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "id == %@", id)
+        request.predicate = NSPredicate(format: "id == \(id)")
+        
         if let borrowlaendEntity = try? AppDelegate.viewContext.fetch(request) {
             for borrow in borrowlaendEntity {
                 AppDelegate.viewContext.delete(borrow)

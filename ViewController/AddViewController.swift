@@ -22,44 +22,27 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var person: UITextField!
     
-    @IBOutlet weak var cancelButton: UIBarButtonItem!
-    
-    @IBOutlet weak var addButton: UIBarButtonItem!
-    
     var type = 0
     var selectedCategory : CategoryObject?
     var mydate = ""
     
-    private let segueToLendViewController = "segueToRecipeDetail"
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == segueToLendViewController {
-                
-                addLend()
-                
-            }
-        }
+    private let segueToLendViewController = "segueToLendViewController"
     
     @IBAction func sgmentedcontrolAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-               print("Prêt")
             type = 0
            }
 
            if sender.selectedSegmentIndex == 1 {
-               print("Emprunt ")
              type = 1
            }
     }
-    @IBAction func cancelButton(_ sender: Any) {
-        
-        //cancel
-    }
-    
+   
     @IBAction func addButton(_ sender: Any) {
         addLend()
-        self.dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: self.segueToLendViewController, sender: self)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+       // performSegue(withIdentifier: self.segueToLendViewController, sender: self)
     }
     
       let viewModel = AddViewModel()
@@ -70,6 +53,7 @@ class AddViewController : UIViewController, UIPickerViewDelegate, UIPickerViewDa
         objectCategory.dataSource = self
         person.delegate = self
         objectName.delegate = self
+        
        
     }
     
